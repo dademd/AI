@@ -378,7 +378,7 @@ random_run(Method, N, M) :-
     get_agents(N, M, Agents),
     run(Method,[N,M],Agents).
 % Example:
-% random_run(bfs, 10, 10, P).
+% random_run(bfs, 10, 10).
 % can be dfs instead of bfs
 
 %--------------------------
