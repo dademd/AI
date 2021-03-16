@@ -378,15 +378,19 @@ random_run(Method, N, M) :-
     get_agents(N, M, Agents),
     run(Method,[N,M],Agents).
 % Example:
+
 % random_run(bfs, 10, 10).
+
 % can be dfs instead of bfs
+% N and M are board sizes
+% Agents = [Doc, Mask, Covid1, Covid2, Home]
 
 %--------------------------
 % "Impossible" maps
 %--------------------------
 
 % 1)
-% run(bfs,[10,10],[[5, 5], [2, 9], [2, 3], [4, 1], [1, 2]],P).
+% run(bfs,[10,10],[[5, 5], [2, 9], [2, 3], [4, 1], [1, 2]]).
 % ..........
 % .M........
 % ..........
@@ -399,7 +403,7 @@ random_run(Method, N, M) :-
 % s.ICI.....
 
 % 2)
-% run(bfs,[10,10],[[5, 5], [2, 9], [1, 3], [3, 2], [1, 2]],P).
+% run(bfs,[10,10],[[5, 5], [2, 9], [1, 3], [3, 2], [1, 2]]).
 % ..........
 % .M........
 % ..........
@@ -412,7 +416,7 @@ random_run(Method, N, M) :-
 % sIII......
 
 % 3) 
-% run(bfs,[10,10],[[9, 10], [9, 10], [10, 8], [7, 10], [10, 10]],P).
+% run(bfs,[10,10],[[9, 10], [9, 10], [10, 8], [7, 10], [10, 10]]).
 % .....ICIDh
 % .....IIIII
 % ........IC
